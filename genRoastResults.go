@@ -24,7 +24,7 @@ func main() {
 	}
 	defer db.Close()
 
-	timer := time.Now()
+	//timer := time.Now()
 	//QueryAndStore(db, false)
 	//fmt.Println("Done without threading. took ", time.Since(timer))
 
@@ -69,7 +69,6 @@ func QueryAndStore(db *sql.DB, useThreading bool) {
 		}
 	}
 	wg.Wait()
-
 }
 
 func writeFiles(db *sql.DB, rowId int, wg *sync.WaitGroup) {
