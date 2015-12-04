@@ -25,8 +25,8 @@ func main() {
 	defer db.Close()
 
 	timer := time.Now()
-	QueryAndStore(db, false)
-	fmt.Println("Done without threading. took ", time.Since(timer))
+	//QueryAndStore(db, false)
+	//fmt.Println("Done without threading. took ", time.Since(timer))
 
 	timer = time.Now()
 	QueryAndStore(db, true)
